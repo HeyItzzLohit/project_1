@@ -1,0 +1,19 @@
+
+
+#------------------------------ 403 ERROR------------------------------------#
+=>Let us mention php and mariadb ports in inbound rules in security group of instance we created.
+
+=>Let us execute following commands:-
+      #  iptables -L (empty here so need to add ports ) 
+      #  sudo iptables -A INPUT -p tcp --dport 80 --syn -m conntrack --ctstate NEW -j ACCEPT
+      #  sudo iptables -A INPUT -p tcp --dport 443 --syn -m conntrack --ctstate NEW -j ACCEPT
+      #  sudo iptables -A INPUT -p tcp --dport 9000 --syn -m conntrack --ctstate NEW -j ACCEPT
+      #  sudo iptables -A INPUT -p tcp --dport 3306 --syn -m conntrack --ctstate NEW -j ACCEPT
+
+=>Still error or access denied because our file don have any rwx permissions. Let us give permission using following command:-
+      
+      #  chmod -R 777 register.php
+
+#-----paste ip address, adn click registration link---------now your registration page is visible----#
+ 
+Now, we need Database to store our entries in our registration page. Refer more to Database file.

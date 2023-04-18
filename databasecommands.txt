@@ -1,0 +1,38 @@
+Let us create a folder and edit the text from database-php
+
+  # sudo nano submit.php
+     (as in register.php you give submit.php to store incoming data) 
+  
+     (copy content from phpwebsite.txt in submit.php)
+  
+  1 create one RDS and connect it to your-ec2/ give user and password
+  2 add ec2 secuirty groups on your RDS 
+----------------------------------------------------------------------------------------------------
+  3 
+     ( get connected with rds on ec2 )   
+
+     #  sudo mysql -h (your database endpoint ) -u admin -p
+
+     #  create database live;
+
+     #  use live;
+
+     #  create table users( id int not null primary key auto_increment , email varchar(100), password varchar(20));
+ ------------------------------------------------------------------------------------------
+
+  4
+     (changes to be done in submit.php)
+ 
+          $servername = "your RDS end point";
+          $username = "admin";
+          $password = "*********";
+          $dbname = "your database name";
+
+          INSERT INTO users (email, password) 
+  ---------------------------------------------------------------------------------------------------
+
+ RESTART ALL THE SERVICES 
+
+
+
+   ______________________Your php page running___________________________________________

@@ -1,0 +1,47 @@
+=>Launch an ec2 instance and connect;
+=>Use commands:
+	1.#yum updaye -y
+	2.#sudo amazon-linux-extras install nginx1
+	3.#systemctl enable nginx1
+	4.#systemctl start nginx
+	5.#service nginx status
+	==========================================
+	6.#yum install mariadb-server -y
+	7.#service mariadb-server status
+	8.#service mariadb start
+	9.#service mariadb status
+	==========================================
+	10.#yum install php -y
+	11.#yum install php-fpm
+	12.#service php-fpm start
+	13.#service php-fpm status
+	==========================================
+=>Thus accordingly we will restart every services:-
+	14.#service php-fpm restart
+     	15.#service php restart
+     	16.#service mariadb restart
+     	17.#service nginx restart
+	==========================================
+=>Let us follow the steps and execute commands as follows:-  
+        18.#cd /usr/share/nginx/html
+        19.#mkdir Live_project (separate folder or in html ) 
+        ==================================================== 
+        20.#nano index.html
+
+        [
+          <h1> this is Live-project </h1>                          # tag line
+          <a href=register.php> Register to Live-project </a>      # create link 
+        ]
+        ========================================================================    
+=> Since we have mentioned above *register.php, we will edit and paste into register.php the content of phpwebsite from repo.
+  
+	21.#nano register.php (Copy-paste from php website)
+                    
+=>Let us now restart all the services and run IP address of instance on tab.
+
+ 
+ 
+
+
+
+#----------ERROR----(*now go to troubleshoot file in repository)--------------- 
